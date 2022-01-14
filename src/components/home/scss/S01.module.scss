@@ -4,6 +4,7 @@
   @include flexCenterStyle;
   width: 100vw;
   height: 100vh;
+  margin-top: 1000px;
   position: relative;
   overflow: hidden;
 
@@ -16,12 +17,11 @@
 
     > .model {
       width: 100%;
-
       position: absolute;
       left: 50%;
       bottom: -50px;
       transform: translate(-50%, 0);
-      z-index: 3;
+      z-index: 33;
     }
 
     > .title {
