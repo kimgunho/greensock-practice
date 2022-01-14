@@ -1,0 +1,36 @@
+// break resize
+$breakpoint-mobile: 740px; // mobile
+$breakpoint-tablet: 1280px; // tablet
+
+// use often
+@mixin backgroundDefaultStyle {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin limiter {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@mixin flexCenterStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// responsive size
+@mixin mobile {
+  @media screen and (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
