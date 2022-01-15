@@ -1,0 +1,27 @@
+@import '../../../common.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  cursor: pointer;
+  position: relative;
+  cursor: none;
+
+  > .title {
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+
+    &.lastTitle {
+      text-shadow: 2px 2px 10px #ddd;
+      z-index: 3;
+    }
+
+    > span {
+      color: aquamarine;
+    }
+  }
+}
