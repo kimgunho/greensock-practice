@@ -2,44 +2,44 @@ import { useRef, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 import styles from './scss/S01.module.scss';
 
 const cx = classNames.bind(styles);
 
-import S01_bg from '../../assets/images/home/background.jpg';
-import model_img from '../../assets/images/home/model.png';
-
 function S01() {
-  const container = useRef();
-  const model = useRef();
-  const bg = useRef();
-  const title = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+  const titleRef = useRef();
+  const containerRef = useRef();
 
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: model.current,
-        start: 'top center',
-        end: 'top top',
+        trigger: containerRef.current,
+        start: '10px top',
+        end: 'center center',
         scrub: true,
         markers: true,
       },
     });
 
-    tl.to(model.current, { rotation: 360, duration: 3 });
+    tl.from(titleRef.current, {
+      autoAlpha: 0,
+      y: `-1000px`,
+      duration: 1,
+    });
+    tl.to(titleRef.current, { scale: 1.5, duration: 2 }, 1);
+    tl.to(containerRef.current, { backgroundColor: '#000', duration: 2 }, 1);
+    tl.to(titleRef.current, { color: '#fff', duration: 2 }, 1);
   }, []);
 
   return (
-    <div ref={container} className={cx('container')}>
+    <div ref={containerRef} className={cx('container')}>
       <div className={cx('info')}>
-        <img ref={model} className={cx('model')} src={model_img} alt="" />
-        <h2 ref={title} className={cx('title')}>
-          see &amp; me
+        <h2 ref={titleRef} className={cx('title')}>
+          ON SEEROELP
         </h2>
       </div>
-      <img ref={bg} className={cx('background')} src={S01_bg} alt="" />
     </div>
   );
 }
