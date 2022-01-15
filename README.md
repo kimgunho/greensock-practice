@@ -40,3 +40,32 @@ gsap.fromTo(
   },
 );
 ```
+
+## Tween
+
+지정된 타겟이 동시에 동작하도록 하는 기능
+
+## timeline
+
+단계의 프레임처럼 지정된 순차대로 동작하는 기능
+
+## ScrollTrigger plugin
+
+스크롤을 기반으로 애니매이션을 제작할 수 있도록 지원합니다.
+
+````js
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // 스크롤트리거 플러그인 불러오기
+gsap.registerPlugin(ScrollTrigger); // 적용
+
+ const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: model.current, // 동작 기준점 타켓
+        start: 'top center', // 동작 시작지점
+        end: 'top top', // 동작 끝 지점
+        scrub: true, // 스크롤 올릴시 복구
+        markers: true, // 마커표기
+      },
+    });
+    ```
+````

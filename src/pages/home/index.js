@@ -2,7 +2,7 @@ import S01 from '../../components/home/S01';
 
 function Home() {
   return (
-    <div style={{ height: 5000 }}>
+    <div>
       <S01 />
     </div>
   );

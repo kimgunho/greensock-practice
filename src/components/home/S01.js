@@ -18,10 +18,17 @@ function S01() {
   const title = useRef();
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: Infinity, repeatDelay: 0.1 });
-    tl.to(model.current, { x: 100, duration: 1 });
-    tl.to(model.current, { y: 50, duration: 1 });
-    tl.to(model.current, { opacity: 0, duration: 1 });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: model.current,
+        start: 'top center',
+        end: 'top top',
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl.to(model.current, { rotation: 360, duration: 3 });
   }, []);
 
   return (
