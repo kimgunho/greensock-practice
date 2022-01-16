@@ -1,13 +1,11 @@
 import S01 from '../../components/home/S01';
-import S02 from '../../components/home/S02';
-import S03 from '../../components/home/S03';
+import S04 from '../../components/home/S04';
 
 function Home() {
   return (
     <div>
       <S01 />
-      <S02 />
-      <S03 />
+      <S04 />
     </div>
   );
 }

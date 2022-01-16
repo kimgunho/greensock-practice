@@ -1,0 +1,23 @@
+@import '../../../common.scss';
+
+.container {
+  overscroll-behavior: none;
+  width: 400vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+
+  .panel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > h2 {
+      color: #000;
+      font-size: 10vw;
+      font-weight: bold;
+    }
+  }
+}
