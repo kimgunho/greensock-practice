@@ -19,7 +19,7 @@ function S01() {
         start: '10px top',
         end: 'center center',
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
 
