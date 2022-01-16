@@ -22,18 +22,18 @@ function S03() {
       ease: 'power4',
     });
     tl.to(bubleRef.current, {
-      x: '+=' + `random(1,10)`,
-      y: '+=' + `random(1,10)`,
+      x: '+=' + `random(-100,100)`,
+      y: '+=' + `random(-100,100)`,
       scale: `random(1,2)`,
       opacity: `random(0,1)`,
       backgroundColor: `random(["#ffbf0f", "#000", "#fff"])`,
       webkitFilter: 'blur(random(1,10)px)',
       duration: 1,
       ease: 'none',
-      stagger: 0.01,
-      yoyo: true,
-      repeat: -1,
+      stagger: 0.05,
+      //   yoyo: true,
       repeatRefresh: true,
+      repeat: -1,
     });
   }, []);
 
