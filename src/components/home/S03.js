@@ -25,6 +25,7 @@ function S03() {
       x: '+=' + `random(1,10)`,
       y: '+=' + `random(1,10)`,
       scale: `random(1,2)`,
+      opacity: `random(0,1)`,
       backgroundColor: `random(["#ffbf0f", "#000", "#fff"])`,
       webkitFilter: 'blur(random(1,10)px)',
       duration: 1,
